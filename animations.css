@@ -1,0 +1,321 @@
+/* Animations CSS */
+
+/* Floating animation */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Rotate animation */
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Typing animation */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Apply animations to elements */
+
+/* Hero section animations */
+.hero h1 {
+  animation: fadeIn 1s ease-out;
+}
+
+.hero h2 {
+  animation: fadeIn 1.2s ease-out;
+}
+
+.hero p {
+  animation: fadeIn 1.4s ease-out;
+}
+
+.hero-buttons {
+  animation: fadeIn 1.6s ease-out;
+}
+
+/* Profile image animation */
+.profile-frame {
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes gradientBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.profile-frame {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color), var(--secondary-color));
+  background-size: 300% 300%;
+  animation: gradientBg 8s ease infinite, float 4s ease-in-out infinite;
+}
+
+/* Section titles animation */
+.section-title {
+  animation: fadeIn 0.8s ease-out;
+}
+
+/* Education cards animation */
+.education-card {
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.education-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.education-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.education-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+/* Skill bars animation */
+.skill-level {
+  animation: expandWidth 1.5s ease-out forwards;
+  width: 0 !important;
+}
+
+@keyframes expandWidth {
+  to {
+    width: var(--width);
+  }
+}
+
+/* Project cards animation */
+.project-card {
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+
+.project-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+/* Certificate cards animation */
+.certificate-card {
+  animation: fadeIn 0.8s ease-out;
+  animation-fill-mode: both;
+}
+
+.certificate-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+.certificate-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+/* Icons animation */
+.education-icon i, .project-icon i, .certificate-icon i {
+  animation: pulse 2s infinite;
+}
+
+/* Footer animation */
+.footer-text {
+  animation: pulse 3s infinite;
+}
+
+/* Social links animation */
+.social-links a {
+  transition: transform 0.3s ease;
+}
+
+.social-links a:hover {
+  transform: translateY(-5px);
+}
+
+/* Typing animation for hero subtitle */
+.typing-text {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 3px solid var(--primary-color);
+  animation:
+    typing 3.5s steps(40, end),
+    blink 0.75s step-end infinite;
+  animation-fill-mode: forwards;
+}
+
+/* Scroll reveal animation */
+.reveal {
+  position: relative;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 1s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Background particles animation */
+.particles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(74, 111, 165, 0.2);
+  animation: float 4s infinite;
+}
+
+/* Add 20 particles with different sizes and positions */
+.particle:nth-child(1) {
+  width: 10px;
+  height: 10px;
+  top: 10%;
+  left: 10%;
+  animation-duration: 6s;
+}
+
+.particle:nth-child(2) {
+  width: 15px;
+  height: 15px;
+  top: 20%;
+  left: 20%;
+  animation-duration: 8s;
+}
+
+.particle:nth-child(3) {
+  width: 8px;
+  height: 8px;
+  top: 30%;
+  left: 30%;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(4) {
+  width: 12px;
+  height: 12px;
+  top: 40%;
+  left: 40%;
+  animation-duration: 9s;
+}
+
+.particle:nth-child(5) {
+  width: 10px;
+  height: 10px;
+  top: 50%;
+  left: 50%;
+  animation-duration: 5s;
+}
+
+.particle:nth-child(6) {
+  width: 14px;
+  height: 14px;
+  top: 60%;
+  left: 60%;
+  animation-duration: 10s;
+}
+
+.particle:nth-child(7) {
+  width: 9px;
+  height: 9px;
+  top: 70%;
+  left: 70%;
+  animation-duration: 7s;
+}
+
+.particle:nth-child(8) {
+  width: 11px;
+  height: 11px;
+  top: 80%;
+  left: 80%;
+  animation-duration: 8s;
+}
+
+.particle:nth-child(9) {
+  width: 13px;
+  height: 13px;
+  top: 90%;
+  left: 90%;
+  animation-duration: 9s;
+}
+
+.particle:nth-child(10) {
+  width: 10px;
+  height: 10px;
+  top: 15%;
+  left: 85%;
+  animation-duration: 6s;
+}
